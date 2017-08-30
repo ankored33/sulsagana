@@ -1,0 +1,35 @@
+#container {
+    height: 100%;
+    margin: auto;
+    max-width:1050px;
+    background-color: #F6CEF5;
+}
+
+#screen {
+    margin: auto;
+    height: 360px;
+    width: 640px;
+    background-color:#FFFFFF;
+}
+
+#cutin1 {
+    float: left;
+    height: 360px;
+    width: 150px;
+    background-color:#000000;
+    color:#ffffff;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+}
+
+#cutin2 {
+    float: right;
+    height: 360px;
+    width: 150px;
+    background-color:#000000;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    color:#ffffff;
+}

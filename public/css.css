@@ -15,13 +15,19 @@
     background-size: 640px;
 }
 
-.cutin{
-    background-color:#000000;
-    color:#ffffff;
+/*
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
-    text-orientation:upright;
+    text-orientation:upright;    
+
+*/
+
+
+.cutin{
+    background-color:#000000;
+    color:#ffffff;
+
     font-family: 'HG正楷書体-PRO', cursive;
     text-align: center;
     vertical-align: middle;
@@ -32,16 +38,16 @@
     height: 360px;
     width: 150px;    
     font-size:80px;
-    margin-top:-360px;
-    margin-right:490px;
+    top:-360px;
+    left:0px;
 }
 
 #cutin2 {
     height: 360px;
     width: 150px;
     font-size:80px;
-    margin-top:360px;
-    margin-right:0px;
+    top:360px;
+    left:490px;
 }
 
 
@@ -49,16 +55,16 @@
     height: 120px;
     width: 640px;
     font-size:80px;
-    margin-top:0px;
-    margin-right:640px;
+    top:0px;
+    left:-640px;
 }
 
 #cutin4 {
     height: 360px;
     width: 150px;
     font-size:80px;
-    margin-top:360px;
-    margin-right:0px;
+    top:360px;
+    left:490px;
 }
 
 
@@ -81,8 +87,6 @@
   box-shadow: 0 1px 0 rgba(136,136,136,1);
   margin: 12px auto 8px;
 }
-
-
 
 #button2 {
   width: 280px;

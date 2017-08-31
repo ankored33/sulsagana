@@ -7,29 +7,63 @@
 
 #screen {
     margin: auto;
+    position: relative;
     height: 360px;
     width: 640px;
-    background-color:#FFFFFF;
+    background-image:url("../public/image/shirabe.png");
+    overflow:hidden;
+    background-size: 640px;
+    z-index:0;
+}
+
+
+
+.cutin{
+    height: 360px;
+    width: 150px;
+    background-color:#000000;
+    color:#ffffff;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    text-orientation:upright;
+    font-family: 'HG正楷書体-PRO', cursive;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
 }
 
 #cutin1 {
-    float: left;
-    height: 360px;
-    width: 150px;
-    background-color:#000000;
-    color:#ffffff;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
+    font-size:80px;
+    margin-top:-360px;
+    margin-right:490px;
+
 }
 
 #cutin2 {
-    float: right;
-    height: 360px;
-    width: 150px;
-    background-color:#000000;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-    color:#ffffff;
+    font-size:80px;
+    margin-top:360px;
+    margin-right:0px;
+}
+
+
+
+#button {
+  width: 280px;
+  height: 100px;
+  background-color: #aaaaaa;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(136,136,136,1);
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px auto;
+
+}
+#button:active {
+  box-shadow: 0 1px 0 rgba(136,136,136,1);
+  margin: 12px auto 8px;
 }

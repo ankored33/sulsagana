@@ -5,7 +5,7 @@
     background-color: #F6CEF5;
 }
 
-#screen {
+.screen {
     margin: auto;
     position: relative;
     height: 360px;
@@ -13,14 +13,9 @@
     background-image:url("../public/image/shirabe.png");
     overflow:hidden;
     background-size: 640px;
-    z-index:0;
 }
 
-
-
 .cutin{
-    height: 360px;
-    width: 150px;
     background-color:#000000;
     color:#ffffff;
     -webkit-writing-mode: vertical-rl;
@@ -34,21 +29,40 @@
 }
 
 #cutin1 {
+    height: 360px;
+    width: 150px;    
     font-size:80px;
     margin-top:-360px;
     margin-right:490px;
-
 }
 
 #cutin2 {
+    height: 360px;
+    width: 150px;
     font-size:80px;
     margin-top:360px;
     margin-right:0px;
 }
 
 
+#cutin3 {
+    height: 120px;
+    width: 640px;
+    font-size:80px;
+    margin-top:0px;
+    margin-right:640px;
+}
 
-#button {
+#cutin4 {
+    height: 360px;
+    width: 150px;
+    font-size:80px;
+    margin-top:360px;
+    margin-right:0px;
+}
+
+
+#button1 {
   width: 280px;
   height: 100px;
   background-color: #aaaaaa;
@@ -61,9 +75,31 @@
   text-align: center;
   text-decoration: none;
   margin: 10px auto;
-
 }
-#button:active {
+
+#button1:active {
+  box-shadow: 0 1px 0 rgba(136,136,136,1);
+  margin: 12px auto 8px;
+}
+
+
+
+#button2 {
+  width: 280px;
+  height: 100px;
+  background-color: #aaaaaa;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 rgba(136,136,136,1);
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px auto;
+}
+
+#button2:active {
   box-shadow: 0 1px 0 rgba(136,136,136,1);
   margin: 12px auto 8px;
 }

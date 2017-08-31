@@ -1,3 +1,10 @@
+
+#header {
+    display: table-cell;
+    vertical-align: middle;
+    height: 70px;
+}
+
 #container {
     height: 100%;
     margin: auto;
@@ -16,22 +23,33 @@
 }
 
 /*
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
-    text-orientation:upright;    
-
+absoluteした場合は
 */
 
 
 .cutin{
     background-color:#000000;
     color:#ffffff;
-
     font-family: 'HG正楷書体-PRO', cursive;
-    text-align: center;
-    vertical-align: middle;
     position: absolute;
+    display: table;
+}
+
+.tate {
+    text-align:center;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    text-orientation:upright;    
+}
+
+.yoko {
+    text-align:left; 
+}
+
+.text {
+    vertical-align: middle;
+    display: table-cell;
 }
 
 #cutin1 {
@@ -49,7 +67,6 @@
     top:360px;
     left:490px;
 }
-
 
 #cutin3 {
     height: 120px;

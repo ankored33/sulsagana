@@ -19,6 +19,7 @@ $(function (){
 
 $(function (){
     $('#main').on('click', '#button2', function(){
+        $('#cutin3').css('text-align','left');
         $('#cutin3').css({'top':'0px','left':'-640px'});
         $('#cutin4').css({'top':'360px','left':'490px'});
         $.when(
@@ -26,6 +27,7 @@ $(function (){
             $('#cutin4').animate({'top':'0px'}, 100)
         ).done(function(){
                 setTimeout(function(){
+                    $('#cutin3').css('text-align','right');
                     $('#cutin3').animate({'top':'250px'}, 100);
                     $('#cutin3').animate({'top':'240px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);

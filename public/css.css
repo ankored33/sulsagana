@@ -17,7 +17,7 @@
     position: relative;
     height: 360px;
     width: 640px;
-    background-image:url("../public/image/shirabe.png");
+    background-image:url("../public/image/shirabe0.jpg");
     overflow:hidden;
     background-size: 640px;
 }
@@ -63,7 +63,7 @@ absoluteした場合は
 #cutin2 {
     height: 360px;
     width: 150px;
-    font-size:80px;
+    font-size:70px;
     top:360px;
     left:490px;
 }

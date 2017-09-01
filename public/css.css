@@ -36,7 +36,7 @@ display: table-cell;　vertical-align: middle;が効かない。
     color:#ffffff;
     font-family: 'HG正楷書体-PRO', cursive;
     position: absolute;
-    display: table;
+    display: none;
 }
 
 .tate {

@@ -11,8 +11,27 @@
 
 <body>
 <div id="container">
-    <div id="header">シュルシャガナ風カットインジェネレーター</div>
+    <div id="header">
+        <p>シュルシャガナ風カットインジェネレーター</p>
+        <form>
+        <input type="button" value="クッキー削除" onclick="delCookie()">
+        </form>        
+        </div>
     <div id="main">
+        <div id="settings">
+            <button>画像アップロード</button>
+            <form action="">
+                <div>
+                    <input type="radio" name="type" value="1" checked="checked">1
+                    <input type="radio" name="type" value="2">2
+                    <input type="radio" name="type" value="3">3
+                </div>
+                <div>
+                    技名前半<input type="text">
+                    技名後半<input type="text">
+                </div>
+            </form>
+        <div>
         <div id="screen1" class="screen">
             <div id="cutin1" class="cutin tate">
                 <span class="text">禁月輪</span>
@@ -20,10 +39,6 @@
             <div id="cutin2" class="cutin tate">
                 <span class="text">非常Σ式</span>
             </div>
-        </div>
-        <div id="button1"></div>
-
-        <div class="screen">
             <div id="cutin3" class="cutin yoko">
                 <span class="text">双月カルマ</span>
             </div>
@@ -31,13 +46,11 @@
                 <span class="text">緊急φ式</span>
             </div>
         </div>
+        <div id="button1"></div>
+
         <div id="button2"></div>
     </div>
     <div id="footer">
-
-        <div>
-          <button onclick="screenshot('#screen1')">Take a shot</button>
-        </div>
         <div id="output_screen">
           <img id="screen_image">
         </div>

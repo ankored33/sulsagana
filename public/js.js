@@ -80,3 +80,4 @@ function delCookie(){
   //ページを再読み込みする
   location.reload();
 }
+

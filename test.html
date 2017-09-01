@@ -16,10 +16,10 @@
         <form>
         <input type="button" value="クッキー削除" onclick="delCookie()">
         </form>        
-        </div>
+    </div>
     <div id="main">
         <div id="settings">
-            <button>画像アップロード</button>
+            <input type="file" accept="image/*" id="getfile">
             <form action="">
                 <div>
                     <input type="radio" name="type" value="1" checked="checked">1
@@ -31,8 +31,9 @@
                     技名後半<input type="text">
                 </div>
             </form>
-        <div>
+        </div>
         <div id="screen1" class="screen">
+            <img src="" id="preview" height="360px">
             <div id="cutin1" class="cutin tate">
                 <span class="text">禁月輪</span>
             </div>
@@ -58,6 +59,24 @@
         <a id="download" href="#" download="test.png"></a>
     </div>
 </div>
+
+<script>
+var file = document.querySelector('#getfile');
+
+file.onchange = function (){
+  var fileList = file.files;
+  //読み込み
+  var reader = new FileReader();
+  reader.readAsDataURL(fileList[0]); 
+
+  //読み込み後
+  reader.onload = function  () {
+    document.querySelector('#preview').src = reader.result;
+  };
+  positionReset();
+};
+
+</script> 
 </body>
 </html>
 

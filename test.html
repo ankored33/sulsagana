@@ -5,6 +5,7 @@
     <title>シュルシャガナ風カットイン ジェネレーター</title>
     <link rel="stylesheet" href="./public/css.css" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script type="text/javascript" src="./public/js.js"></script>
 </head>
 
@@ -12,7 +13,7 @@
 <div id="container">
     <div id="header">シュルシャガナ風カットインジェネレーター</div>
     <div id="main">
-        <div class="screen">
+        <div id="screen1" class="screen">
             <div id="cutin1" class="cutin tate">
                 <span class="text">禁月輪</span>
             </div>
@@ -32,7 +33,17 @@
         </div>
         <div id="button2"></div>
     </div>
-    <div id="footer">footer</div>
+    <div id="footer">
+
+        <div>
+          <button onclick="screenshot('#screen1')">Take a shot</button>
+        </div>
+        <div id="output_screen">
+          <img id="screen_image">
+        </div>
+        <hr />
+        <a id="download" href="#" download="test.png"></a>
+    </div>
 </div>
 </body>
 </html>

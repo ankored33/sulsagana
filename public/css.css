@@ -17,13 +17,17 @@
     position: relative;
     height: 360px;
     width: 640px;
-    background-image:url("../public/image/shirabe0.jpg");
+    background-color: #fffff0;
+    /* background-image:url("../public/image/shirabe0.jpg"); */
     overflow:hidden;
     background-size: 640px;
 }
 
+
 /*
-absoluteした場合は
+position:absoluteの要素は強制的にblockになり
+display: table-cell;　vertical-align: middle;が効かない。
+その場合親要素をdisplay: table;としインラインの子要素にdisplay: table-cell;　vertical-align: middle;を書く
 */
 
 
@@ -123,4 +127,8 @@ absoluteした場合は
 #button2:active {
   box-shadow: 0 1px 0 rgba(136,136,136,1);
   margin: 12px auto 8px;
+}
+
+#output_screen {
+    display: none;
 }

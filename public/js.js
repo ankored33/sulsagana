@@ -1,5 +1,6 @@
 $(function (){
     $('#main').on('click', '#button1', function(){
+        erase_screenshot();
         $('#cutin1').css({'top':'-360px','left':'0px'});
         $('#cutin2').css({'top':'360px','left':'490px'});
         var redTxt = $('#cutin2 > span:nth-child(1)').text();
@@ -15,6 +16,7 @@ $(function (){
                     $('#cutin2').animate({'left':'-10px'}, 100);
                     $('#cutin2').animate({'left':'0px'}, 30);
                 },140);
+        screenshot('#screen1');
         });
     });
 });
@@ -42,3 +44,20 @@ $(function (){
         });
     });
 });
+
+
+function screenshot(selector) {
+    var element = $(selector)[0];
+    html2canvas(element, { onrendered: function(canvas) {
+        var imgData = canvas.toDataURL();
+        $('#screen_image')[0].src = imgData;
+        $('#download')[0].href = imgData;
+        $('#download')[0].innerHTML = "Download";
+    }});
+}
+
+function erase_screenshot() {
+    $('#screen_image')[0].src = "";
+    $('#download')[0].href = "#";
+    $('#download')[0].innerHTML = "";
+}

@@ -111,25 +111,6 @@ display: table-cell;　vertical-align: middle;が効かない。
   margin: 12px auto 8px;
 }
 
-#button2 {
-  width: 280px;
-  height: 100px;
-  background-color: #aaaaaa;
-  border-radius: 3px;
-  box-shadow: 0 3px 0 rgba(136,136,136,1);
-  color: #ffffff;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px auto;
-}
-
-#button2:active {
-  box-shadow: 0 1px 0 rgba(136,136,136,1);
-  margin: 12px auto 8px;
-}
 
 #output_screen {
     display: none;

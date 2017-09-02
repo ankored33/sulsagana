@@ -6,6 +6,22 @@ $(function (){
         positionReset();
         $('.cutin').css('display','table');
 
+        switch (radioVal){
+            case "A":
+                animeA();
+                break;
+            case "B":
+                animeB();
+                break;        
+            case "C":
+                animeA();
+                break;
+        }
+        screenshot('#screen1');
+    });
+});
+
+function animeA() {
         $.when(
             $('#cutin1').animate({'top':'0px'}, 100),
             $('#cutin2').animate({'top':'0px'}, 100),
@@ -18,25 +34,14 @@ $(function (){
                     $('#cutin2').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()
                 },140);
-        screenshot('#screen1');
-        });
-    });
-});
+        });    
+}
 
-
-
-
-
-
-$(function (){
-    $('#main').on('click', '#button2', function(){
-        positionReset();
-        var redTxt = $('#cutin4 > span:nth-child(1)').text();
-        var sub = redTxt.substr(redTxt.length-2,1);
-        $('#cutin4 > span:nth-child(1)').html(redTxt.replace(sub,'<span style="color:red">' + sub + '</span>'));
+function animeB() {
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
-            $('#cutin4').animate({'top':'0px'}, 100)
+            $('#cutin4').animate({'top':'0px'}, 100),
+            $('#sound1').get(0).play()
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin3').css('text-align','right');
@@ -44,10 +49,14 @@ $(function (){
                     $('#cutin3').animate({'top':'240px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);
                     $('#cutin4').animate({'left':'0px'}, 30);
+                    $('#sound2').get(0).play()
                 },140);
         });
-    });
-});
+}
+
+
+
+
 
 
 

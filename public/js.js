@@ -54,12 +54,6 @@ function animeB() {
         });
 }
 
-
-
-
-
-
-
 $(function(){
   $('input[name="ta"]').blur(function(){
         var textValA = $('input[name="ta"]').val().replace(/[A-Za-z0-9]/g, function(s) {
@@ -78,14 +72,15 @@ $(function(){
         $('#cutin2').children().text(textValA);
         $('#cutin4').children().text(textValA);
         var redTxt2 = $('#cutin2 > span:nth-child(1)').text();
-        var sub = redTxt2.substr(redTxt2.length-2,1);
-        $('#cutin2 > span:nth-child(1)').html(redTxt2.replace(sub,'<span style="color:red">' + sub + '</span>'));
-        var redTxt4 = $('#cutin2 > span:nth-child(1)').text();
-        var sub = redTxt4.substr(redTxt4.length-2,1);
-        $('#cutin4 > span:nth-child(1)').html(redTxt4.replace(sub,'<span style="color:red">' + sub + '</span>'));
+        var sub2 = redTxt2.substr(redTxt2.length-2,1);
+        console.log(sub2);
+        $('#cutin2 > span:nth-child(1)').html(redTxt2.replace(sub2,'<span style="color:red">' + sub2 + '</span>'));
+        var redTxt4 = $('#cutin4 > span:nth-child(1)').text();
+        var sub4 = redTxt4.substr(redTxt4.length-2,1);
+        console.log(sub4);
+        $('#cutin4 > span:nth-child(1)').html(redTxt4.replace(sub4,'<span style="color:red">' + sub4 + '</span>'));
   });
 });
-
 
 
 $(function(){

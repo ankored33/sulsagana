@@ -18,7 +18,6 @@
     width: 640px;
     background-color: #fffff0;
     /* background-image:url("../public/image/shirabe0.jpg"); */
-    overflow:hidden;
     background-size: 640px;
 }
 
@@ -36,8 +35,7 @@ display: table-cell;　vertical-align: middle;が効かない。
 その場合親要素をdisplay: table;としインラインの子要素にdisplay: table-cell;　vertical-align: middle;を書く
 */
 
-
-.cutin{
+#box1, #box2 {
     background-color:#000000;
     color:#ffffff;
     font-family: 'HG正楷書体-PRO', cursive;
@@ -45,7 +43,17 @@ display: table-cell;　vertical-align: middle;が効かない。
     display: none;
 }
 
-.tate {
+
+.text {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.cutin1 {
+    height: 360px;
+    width: 150px;    
+    top:-360px;
+    left:0px;
     text-align:center;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
@@ -53,41 +61,36 @@ display: table-cell;　vertical-align: middle;が効かない。
     text-orientation:upright;    
 }
 
-.yoko {
-    text-align:left; 
-}
-
-.text {
-    vertical-align: middle;
-    display: table-cell;
-}
-
-#cutin1 {
-    height: 360px;
-    width: 150px;    
-    top:-360px;
-    left:0px;
-}
-
-#cutin2 {
+.cutin2 {
     height: 360px;
     width: 150px;
     top:360px;
     left:490px;
+    text-align:center;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    text-orientation:upright;    
 }
 
-#cutin3 {
+.cutin3 {
     height: 120px;
     width: 640px;
     top:0px;
     left:-640px;
+    text-align:left; 
 }
 
-#cutin4 {
+.cutin4 {
     height: 360px;
     width: 150px;
     top:360px;
     left:490px;
+    text-align:center;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    text-orientation:upright;
 }
 
 

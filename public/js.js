@@ -12,12 +12,11 @@ $(function (){
                 break;
             case "B":
                 animeB();
-                break;        
+                break;
             case "C":
                 animeA();
                 break;
         }
-        screenshot('#screen1');
     });
 });
 
@@ -34,6 +33,7 @@ function animeA() {
                     $('#cutin2').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()
                 },140);
+        screenshot('#screen1');
         });    
 }
 
@@ -51,11 +51,47 @@ function animeB() {
                     $('#cutin4').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()
                 },140);
+        screenshot('#screen1');
         });
 }
 
+function animeB() {
+        $.when(
+            $('#cutin3').animate({'left':'0px'}, 100),
+            $('#cutin4').animate({'top':'0px'}, 100),
+            $('#sound1').get(0).play()
+        ).done(function(){
+                setTimeout(function(){
+                    $('#cutin3').css('text-align','right');
+                    $('#cutin3').animate({'top':'250px'}, 100);
+                    $('#cutin3').animate({'top':'240px'}, 30);
+                    $('#cutin4').animate({'left':'-10px'}, 100);
+                    $('#cutin4').animate({'left':'0px'}, 30);
+                    $('#sound2').get(0).play()
+                },140);
+        screenshot('#screen1');
+        });
+}
+
+$(document).ready(function(){
+    insertText246();
+    insertText135();
+});
+
 $(function(){
   $('input[name="ta"]').blur(function(){
+    insertText246();
+  });
+});
+
+
+$(function(){
+  $('input[name="tb"]').blur(function(){
+    insertText135();
+  });
+});
+
+function insertText246 (){
         var textValA = $('input[name="ta"]').val().replace(/[A-Za-z0-9]/g, function(s) {
             return String.fromCharCode(s.charCodeAt(0) + 65248);
         }); //半角を全角に
@@ -73,18 +109,13 @@ $(function(){
         $('#cutin4').children().text(textValA);
         var redTxt2 = $('#cutin2 > span:nth-child(1)').text();
         var sub2 = redTxt2.substr(redTxt2.length-2,1);
-        console.log(sub2);
         $('#cutin2 > span:nth-child(1)').html(redTxt2.replace(sub2,'<span style="color:red">' + sub2 + '</span>'));
         var redTxt4 = $('#cutin4 > span:nth-child(1)').text();
         var sub4 = redTxt4.substr(redTxt4.length-2,1);
-        console.log(sub4);
         $('#cutin4 > span:nth-child(1)').html(redTxt4.replace(sub4,'<span style="color:red">' + sub4 + '</span>'));
-  });
-});
+}
 
-
-$(function(){
-  $('input[name="tb"]').blur(function(){
+function insertText135(){
         var textValB = $('input[name="tb"]').val().replace(/[A-Za-z0-9]/g, function(s) {
             return String.fromCharCode(s.charCodeAt(0) + 65248);
         });
@@ -100,9 +131,7 @@ $(function(){
         }
         $('#cutin1').children().text(textValB);
         $('#cutin3').children().text(textValB);
-  });
-});
-
+}
 
 function screenshot(selector) {
     var element = $(selector)[0];

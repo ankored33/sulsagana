@@ -1,18 +1,47 @@
-
-#header {
-    margin:auto;
-}
-
-
 #container {
     height: 100%;
     margin: auto;
     max-width:1050px;
-    background-color: #F6CEF5;
+}
+
+#header {
+    margin-bottom: 5px;
+    border-bottom:solid 2px #F781F3;
+    background-color:#ffffff;
+    font-size:30px;
+    color:#F5A9F2;
+}
+
+#main{
+    background-color: #F8E0F7;
+    padding-top: 10px;
+
+}
+
+#about{
+    margin-top:50px;
+    margin:10px 0px;
+    font-weight: bold;
+    color:#0B610B;
+}
+
+#about a:link,#about a:visited{
+    color:#0B610B;
+}
+
+#settings{
+    margin: 15px auto;
+    overflow:auto;
+}
+
+.select{
+    float:left;
+    max-width: 350px;
 }
 
 .screen {
-    margin: auto;
+    clear:both;
+    margin: 10px auto;
     position: relative;
     height: 360px;
     width: 640px;

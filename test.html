@@ -9,34 +9,32 @@
     <script type="text/javascript" src="./public/js.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 </head>
-
 <body>
 <div id="container">
     <header>
-        <h1>シュルシャガナ風カットインジェネレーター</h1>
+        <h1><a href="/" target="blank">シュルシャガナ<span class="sakimori">風</span>カットインジェネレーター</a></h1>
         <p>『戦姫絶唱シンフォギア』に登場する<a href="http://www.symphogear-axz.com/characters/shirabe.php" target="blank">月詠調</a>のギア「シュルシャガナ」のカットインっぽいものが作れるサイトです<p>
     </header>
     <section id="main">
-        <div id="settings">
-            <input type="file" accept="image/*" id="getfile" style="display:none;">
+        <div id="settings" class="shadow">
+
 
             <div id="stype" class="select">
-                <span class="s-tytle">１．タイプを選びます</span>
+                <p>タイプを選びます</p>
                     <div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="A" checked="checked"></div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="B"></div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="C"></div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="A" checked="checked">左右</div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="B">左下</div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="C">右上</div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
                     </div>
             </div>
-            <div id="stext" class="select">
-                <p class="kirika">２．技名を入力するデス！</p>
+            <div id="s-tytle" class="select">
+                <p class="">技名を入力する</p>
                 <p>技名前半<input type="text" name="ta" class="tbox" value="非常Σ式"></p>
                 <p>技名後半<input type="text" name="tb" class="tbox" value="禁月輪"></p>
             </div>
         </div>
         <div id="screen1">
             <img src="" id="preview">
-            <div class="tap">タップして画像をアップ</div>
             <div id="cutin1" class="cutin tate">
                 <span class="text"></span>
             </div>
@@ -51,13 +49,18 @@
             </div>
         </div>
         <div id="execute">
-            <div id="button1"></div>
-            <div id="output_screen">
-                <a id="download" href="#" download="test.png"></a>
-            </div>
+            <div id="button1">いくよっ</div>
+            <div id="dl-button" class="inactive">画像DL</div>
+            <div id="sns-button">
+            </div>            
         </div>
     </section>
     <footer>
+        <div style="display:none;">
+            <a id="download" href="#" download="test.png">ダウンロード</a>
+            <input type="file" accept="image/*" id="getfile">
+        </div>
+        test
     </footer>
 </div>
 

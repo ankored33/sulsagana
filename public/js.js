@@ -1,11 +1,10 @@
-$(function (){
-    $('#main').on('click', '#button1', function(){
+$(document).ready(function(){
+    $('#main').on('click', '#execute > #button1', function(){
         var radioVal = $('input[name="type"]:checked').val();
 
         erase_screenshot();
         positionReset();
         $('.cutin').css('display','table');
-
         switch (radioVal){
             case "A":
                 animeA();
@@ -18,6 +17,29 @@ $(function (){
                 break;
         }
     });
+
+
+    $('.tbox').on('click', function(e) {
+    e.target.setSelectionRange(0, e.target.value.length);
+    console.log('selected');
+    });
+
+    $('#screen1').click(function(){
+      $('#getfile').click();
+      return false;
+    });
+
+    insertText246();
+    insertText135();
+
+  $('input[name="ta"]').blur(function(){
+    insertText246();
+  });
+
+  $('input[name="tb"]').blur(function(){
+    insertText135();
+  });
+    
 });
 
 function animeA() {
@@ -73,23 +95,7 @@ function animeB() {
         });
 }
 
-$(document).ready(function(){
-    insertText246();
-    insertText135();
-});
 
-$(function(){
-  $('input[name="ta"]').blur(function(){
-    insertText246();
-  });
-});
-
-
-$(function(){
-  $('input[name="tb"]').blur(function(){
-    insertText135();
-  });
-});
 
 function insertText246 (){
         var textValA = $('input[name="ta"]').val().replace(/[A-Za-z0-9]/g, function(s) {
@@ -137,14 +143,12 @@ function screenshot(selector) {
     var element = $(selector)[0];
     html2canvas(element, { onrendered: function(canvas) {
         var imgData = canvas.toDataURL();
-        $('#screen_image')[0].src = imgData;
         $('#download')[0].href = imgData;
         $('#download')[0].innerHTML = "Download";
     }});
 }
 
 function erase_screenshot() {
-    $('#screen_image')[0].src = "";
     $('#download')[0].href = "#";
     $('#download')[0].innerHTML = "";
 }
@@ -155,5 +159,3 @@ function positionReset(){
         $('#cutin3').css({'top':'0px','left':'-640px','text-align':'left'});
         $('#cutin4').css({'top':'360px','left':'490px'});        
 }
-
-

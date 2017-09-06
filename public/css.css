@@ -1,33 +1,40 @@
+
+
 #container {
     height: 100%;
     margin: auto;
     max-width:1050px;
 }
 
-#header {
+p {
+    line-height: 0.5em;
+}
+
+header {
     margin-bottom: 5px;
-    border-bottom:solid 2px #F781F3;
-    background-color:#ffffff;
+    padding-bottom:5px;
+    border-bottom:solid 2px #F8E0F7;
+}
+
+header h1{
     font-size:30px;
+    color:#F5A9F2;
+
+}
+
+
+
+header a:link,#about a:visited{
     color:#F5A9F2;
 }
 
+
 #main{
-    background-color: #F8E0F7;
-    padding-top: 10px;
-
+    margin:auto;
+    width:800px;
 }
 
-#about{
-    margin-top:50px;
-    margin:10px 0px;
-    font-weight: bold;
-    color:#0B610B;
-}
 
-#about a:link,#about a:visited{
-    color:#0B610B;
-}
 
 #settings{
     margin: 15px auto;
@@ -36,27 +43,34 @@
 
 .select{
     float:left;
-    max-width: 350px;
+    width:390px;
+    padding-left:10px;
 }
 
-.screen {
+.cb {
+    float:left;
+    margin:0px 5px;
+    
+}
+
+#screen1 {
     clear:both;
     margin: 10px auto;
     position: relative;
     height: 360px;
     width: 640px;
-    background-color: #fffff0;
+    background-color: #D8D8D8;
     /* background-image:url("../public/image/shirabe0.jpg"); */
     overflow:hidden;
     background-size: 640px;
 }
 
 
-
 #preview {
  display: block;
- margin-left: auto;
- margin-right: auto;
+ margin-top:0px;
+ margin-right: 0px;
+ height:360px;
 }
 
 /*
@@ -119,28 +133,47 @@ display: table-cell;　vertical-align: middle;が効かない。
     left:490px;
 }
 
+#execute {
+    overflow:hidden;
+    width:640px;
+    margin:auto;
+}
+
+#download{
+    float:left;
+}
 
 #button1 {
-  width: 280px;
-  height: 100px;
-  background-color: #aaaaaa;
-  border-radius: 3px;
-  box-shadow: 0 3px 0 rgba(136,136,136,1);
-  color: #ffffff;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px auto;
-}
-
-#button1:active {
-  box-shadow: 0 1px 0 rgba(136,136,136,1);
-  margin: 12px auto 8px;
+    width: 200px;
+    height: 80px;
+    background-color: #583f45;
+    float:left;
 }
 
 
-#output_screen {
-    display: none;
+
+
+.kirika{
+    font-weight: bold;
+    color:#04B404;
+}
+
+.sakimori{
+    font-weight: bold;
+    color:#0000FF;
+}
+
+.maria {
+    font-weight: bold;
+    color:#A4A4A4;   
+}
+
+.chris{
+    color:#FE2E64;
+    font-weight: bold;
+}
+
+.hibiki{
+    color:#FACC2E;
+    font-weight: bold;
 }

@@ -44,8 +44,6 @@ $(document).ready(function(){
 });
 
 
-
-
 function animeA() {
         $.when(
             $('#cutin1').animate({'top':'0px'}, 100),

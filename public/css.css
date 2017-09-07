@@ -55,6 +55,7 @@ header > p > a:link,#about a:visited{
 #main{
     width:640px;
     margin-left:80px;
+    padding-bottom: 50px;
 }
 
 
@@ -94,10 +95,16 @@ header > p > a:link,#about a:visited{
     text-align:center;
 }
 
-#screen1 :hover {
-    background-color:#F2F2F2;
-}
 
+#upload {
+    position:absolute;
+    margin-top: 120px ;
+    margin-left:220px;
+    background-color: #ffffff;
+    height:120px;
+    width:200px;
+    
+}
 
 #preview {
  display: block;
@@ -193,6 +200,7 @@ display: table-cell;　vertical-align: middle;が効かない。
 
 #button1:hover {
     background-color: #F7819F;
+    cursor:pointer;
 }
 
 #dl-button {
@@ -226,10 +234,8 @@ display: table-cell;　vertical-align: middle;が効かない。
 footer {
     background-color:#d2d2d2;
     clear:both;
-    width:100%;
-    height: 50px;
-    position: fixed;
-    
+    width: 100%;
+    height:50px;
 }
 
 .kirika{

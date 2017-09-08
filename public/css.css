@@ -1,6 +1,8 @@
+
 a {
     text-decoration: none;
 }
+
 html{
     height:100%;
 }
@@ -9,8 +11,6 @@ body{
     margin:0px;
     height:100%;
 }
-
-
 
 .shadow{
     box-shadow: 1px 1px 1px 1px #F2F2F2;
@@ -22,7 +22,7 @@ body{
     height: auto !important;
     margin:auto;
     margin-top:0px;
-    max-width:900px;
+    max-width:990px;
     font-size:13px;
     background-color:#ffffff;
 }
@@ -32,7 +32,7 @@ p {
 }
 
 header {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-bottom:solid 2px #F8E0F7;
     line-height: 0.5em;
     height:60px;
@@ -54,8 +54,13 @@ header > p > a:link,#about a:visited{
 
 #main{
     width:640px;
-    margin-left:80px;
-    padding-bottom: 50px;
+    margin-left:40px;
+    margin-right:20px;
+    float:left;
+}
+
+#tw {
+    float:left;
 }
 
 
@@ -66,6 +71,7 @@ header > p > a:link,#about a:visited{
     height:115px;
 }
 
+
 .select{
     height:100%;
     float:left;
@@ -74,17 +80,21 @@ header > p > a:link,#about a:visited{
     background-color:#F5A9BC;
 }
 
-
+#settings p {
+    color:#610B21;
+    font-weight: bold;
+    
+}
 
 .cb {
     float:left;
     margin:0px 5px;
-    
 }
 
 #screen1 {
     clear:both;
-    margin: 10px auto;
+    margin: auto;
+    margin-top:20px;
     position: relative;
     height: 360px;
     width: 640px;
@@ -121,7 +131,8 @@ display: table-cell;　vertical-align: middle;が効かない。
 .cutin {
     background-color:#000000;
     color:#ffffff;
-    font-family: 'HG正楷書体-PRO', cursive;
+    font-family: "Yu Mincho","YuMincho";
+    font-weight: bold;
     position: absolute;
     display: none;
 }
@@ -182,19 +193,20 @@ display: table-cell;　vertical-align: middle;が効かない。
     margin:auto;
 }
 
-#download{
+
+#button-area{
     float:left;
+    margin-right:10px;
 }
 
 #button1 {
     width: 210px;
     height: 60px;
     background-color: #FA5882;
-    float:left;
-    margin-right:10px;
     line-height: 60px;
     color:#ffffff;
     font-size:18px;
+    font-weight: bold;
     text-align:center;
 }
 
@@ -208,20 +220,22 @@ display: table-cell;　vertical-align: middle;が効かない。
     height:60px;
     float:left;
     margin-right:10px;
-    font-size:18px;
     text-align:center;
     line-height: 60px;
 }
 
-.active{
-    background-color: #583f45;
-    color:#FFFFFF;
+#dl-button a {
+    display:none;
+    width:100%;
+    background-color: #6E6E6E;
+    color:#ffffff;
+    font-weight:bold;
 }
 
-.inactive {
-    background-color: #D8D8D8;
-    color:#E6E6E6;
+#dl-button a :hover {
+    background-color: #A4A4A4;
 }
+
 
 #sns-button {
     width:258px;
@@ -235,7 +249,6 @@ footer {
     background-color:#d2d2d2;
     clear:both;
     width: 100%;
-    height:50px;
 }
 
 .kirika{

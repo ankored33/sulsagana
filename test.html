@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>シュルシャガナ風カットイン ジェネレーター</title>
     <link rel="stylesheet" href="./public/css.css" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" /><!--googlefont-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script type="text/javascript" src="./public/js.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
@@ -13,12 +14,10 @@
 <div id="container">
     <header>
         <h1><a href="/" target="blank">シュルシャガナ<span class="sakimori">風</span>カットインジェネレーター</a></h1>
-        <p>『戦姫絶唱シンフォギア』に登場する<a href="http://www.symphogear-axz.com/characters/shirabe.php" target="blank">月詠調</a>のギア「シュルシャガナ」のカットインっぽいものが作れるサイトです<p>
+        <p>『戦姫絶唱シンフォギア』に登場する<a href="http://www.symphogear-axz.com/characters/shirabe.php" target="blank">月詠調</a>のギア「シュルシャガナ」のカットインっぽいものが作れるわけだ<p>
     </header>
     <section id="main">
         <div id="settings" class="shadow">
-
-
             <div id="stype" class="select">
                 <p>タイプを選びます</p>
                     <div>
@@ -48,16 +47,35 @@
                 <span class="text"></span>
             </div>
         </div>
+        <div style="margin-bottom:15px; text-align:right;"><a href="">画面リセット</a></div>
         <div id="execute">
-            <div id="button1">いくよっ</div>
-            <div id="dl-button" class="inactive">画像DL</div>
+            <div id="button-area">
+                <div id="button1">いくよっ</div>
+                <div>
+                    音声<label><input type="radio" name="sound" value="on" checked="checked">鳴らす</label>
+                    <label><input type="radio" name="sound" value="off">オフ</label>
+                </div>
+            </div>
+            <div id="dl-button">
+                <a id="download" href="#" download="cut_in.png">画像ダウンロード</a>
+            </div>
             <div id="sns-button">
-            </div>            
+                <a href="https://twitter.com/intent/tweet?button_hashtag=symphogear" class="twitter-hashtag-button">Tweet #symphogear</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="line-it-button" data-lang="ja" data-type="share-d" data-url="https://ide.c9.io/barbieri0303/sulsagana" style="display: none;"></div>
+                <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+            </div>
         </div>
+    </section>
+    <section id="tw">
+            <a class="twitter-timeline"  href="https://twitter.com/hashtag/symphogear"
+                data-widget-id="905967462595780608"
+                data-height="540"
+                data-width="250">#symphogear のツイート
+            </a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </section>
     <footer>
         <div style="display:none;">
-            <a id="download" href="#" download="test.png">ダウンロード</a>
             <input type="file" accept="image/*" id="getfile">
         </div>
         test
@@ -72,7 +90,7 @@ file.onchange = function (){
   var fileList = file.files;
   //読み込み
   var reader = new FileReader();
-  reader.readAsDataURL(fileList[0]); 
+  reader.readAsDataURL(fileList[0]);
 
   //読み込み後
   reader.onload = function  () {
@@ -80,7 +98,7 @@ file.onchange = function (){
   };
   positionReset();
 };
-</script> 
+</script>
 
 <audio id="sound1" preload="auto">
     <source src="../public/sound/hyoushigi2.mp3" type="audio/mp3">

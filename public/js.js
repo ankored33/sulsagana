@@ -1,11 +1,9 @@
 $(document).ready(function(){
-    $('#main').on('click', '#execute > #button1', function(){
+    $('#main').on('click', '#execute > #button-area > #button1', function(){
         var radioVal = $('input[name="type"]:checked').val();
-
         erase_screenshot();
         positionReset();
         $('.cutin').css('display','table');
-
         switch (radioVal){
             case "A":
                 animeA();
@@ -16,6 +14,7 @@ $(document).ready(function(){
             case "C":
                 break;
         }
+        setTimeout(function() {screenshot('#screen1');}, 700);
     });
 
 
@@ -24,12 +23,12 @@ $(document).ready(function(){
     console.log('selected');
     });
 
-
+/*
     $('#screen1').click(function(){
       $('#getfile').click();
       return false;
     });
-
+*/
     insertText246();
     insertText135();
 
@@ -40,7 +39,6 @@ $(document).ready(function(){
   $('input[name="tb"]').blur(function(){
     insertText135();
   });
-    
 });
 
 
@@ -57,7 +55,6 @@ function animeA() {
                     $('#cutin2').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()
                 },140);
-        screenshot('#screen1');
         });    
 }
 
@@ -76,10 +73,9 @@ function animeB() {
                     $('#sound2').get(0).play()
                 },140);
         });
-        screenshot('#screen1');
 }
 
-function animeB() {
+function animeC() {
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
             $('#cutin4').animate({'top':'0px'}, 100),
@@ -93,7 +89,6 @@ function animeB() {
                     $('#cutin4').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()
                 },140);
-        screenshot('#screen1');
         });
 }
 
@@ -104,8 +99,8 @@ function insertText246 (){
             return String.fromCharCode(s.charCodeAt(0) + 65248);
         }); //半角を全角に
         if (textValA.length <= 3){
-            $('#cutin2').css('font-size',100);
-            $('#cutin4').css('font-size',100);
+            $('#cutin2').css('font-size',90);
+            $('#cutin4').css('font-size',90);
         } else if (textValA.length == 4 ) {
             $('#cutin2').css('font-size',80);
             $('#cutin4').css('font-size',80);
@@ -128,13 +123,13 @@ function insertText135(){
             return String.fromCharCode(s.charCodeAt(0) + 65248);
         });
         if (textValB.length <= 3){
-            $('#cutin1').css({'font-size':100, 'letter-spacing':'0em'});
-            $('#cutin3').css({'font-size':100, 'letter-spacing':'0.5em'});
+            $('#cutin1').css({'font-size':90});
+            $('#cutin3').css({'font-size':90, 'letter-spacing':'0.5em'});
         } else if (textValB.length == 4 ) {
             $('#cutin1').css({'font-size':80, 'letter-spacing':'0em'});
             $('#cutin3').css({'font-size':80, 'letter-spacing':'0.3em'});
         } else if (textValB.length >= 5 ) {
-            $('#cutin1').css({'font-size':60, 'letter-spacing':'0em'});
+            $('#cutin1').css({'font-size':60});
             $('#cutin3').css({'font-size':80, 'letter-spacing':'0em'});
         }
         $('#cutin1').children().text(textValB);
@@ -146,8 +141,7 @@ function screenshot(selector) {
     html2canvas(element, { onrendered: function(canvas) {
         var imgData = canvas.toDataURL();
         $('#download')[0].href = imgData;
-        $('#dl-button').removeClass('inactive');
-        $('#dl-button').addClass('active');
+        $('#dl-button a').css('display', 'block');
     }});
 }
 
@@ -160,7 +154,5 @@ function positionReset(){
         $('#cutin2').css({'top':'360px','left':'490px'});
         $('#cutin3').css({'top':'0px','left':'-640px','text-align':'left'});
         $('#cutin4').css({'top':'360px','left':'490px'});        
-        $('#dl-button').removeClass('inactive');
-        $('#dl-button').addClass('inactive');
-    
+        $('#dl-button a').css('display', 'none');
 }

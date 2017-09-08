@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#main').on('click', '#execute > #button-area > #button1', function(){
+    $('#main').on('click', '#execute > #button1', function(){
         var radioVal = $('input[name="type"]:checked').val();
         erase_screenshot();
         positionReset();
@@ -23,12 +23,11 @@ $(document).ready(function(){
     console.log('selected');
     });
 
-/*
-    $('#screen1').click(function(){
+    $('#preview').click(function(){
       $('#getfile').click();
       return false;
     });
-*/
+
     insertText246();
     insertText135();
 

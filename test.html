@@ -17,8 +17,8 @@
         <p>『戦姫絶唱シンフォギア』に登場する<a href="http://www.symphogear-axz.com/characters/shirabe.php" target="blank">月詠調</a>のギア「シュルシャガナ」のカットインっぽいものが作れるわけだ<p>
     </header>
     <section id="main">
-        <div id="settings" class="shadow">
-            <div id="stype" class="select">
+        <div id="settings">
+            <div id="c-type" class="select">
                 <p>タイプを選びます</p>
                     <div>
                         <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="A" checked="checked">左右</div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
@@ -26,14 +26,28 @@
                         <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="C">右上</div><div><img src="../public/image/typeA.jpg" width="80px"></div></label></div>
                     </div>
             </div>
-            <div id="s-tytle" class="select">
-                <p class="">技名を入力する</p>
-                <p>技名前半<input type="text" name="ta" class="tbox" value="非常Σ式"></p>
-                <p>技名後半<input type="text" name="tb" class="tbox" value="禁月輪"></p>
+            <div id="c-name" class="select">
+                <p class="">技名を入力します</p>
+                <div class="inputname"><input type="text" name="ta" class="tbox" value="非常Σ式"></div>
+                <div class="inputname"><input type="text" name="tb" class="tbox" value="禁月輪"></div>
             </div>
+            <div id="c-sound">
+                <div class="sample">
+                    <div class="oto">音声</div>
+                    <input type="radio" name="s2" id="on" value="1" checked="">
+                    <label for="on" class="switch-on">鳴</label>
+                    <input type="radio" name="s2" id="off" value="0">
+                    <label for="off" class="switch-off">止</label>
+                </div>
+                    <!--
+                    音声<label><input type="radio" name="sound" value="on" checked="checked">鳴らす</label>
+                    <label><input type="radio" name="sound" value="off">オフ</label>
+                    -->
+            </div>
+
         </div>
         <div id="screen1">
-            <img src="" id="preview">
+            <img src="../public/image/default.png" id="preview">
             <div id="cutin1" class="cutin tate">
                 <span class="text"></span>
             </div>
@@ -47,15 +61,9 @@
                 <span class="text"></span>
             </div>
         </div>
-        <div style="margin-bottom:15px; text-align:right;"><a href="">画面リセット</a></div>
+        <div style="margin-bottom:15px; text-align:right;"><a href="">画面をリセットします</a></div>
         <div id="execute">
-            <div id="button-area">
-                <div id="button1">いくよっ</div>
-                <div>
-                    音声<label><input type="radio" name="sound" value="on" checked="checked">鳴らす</label>
-                    <label><input type="radio" name="sound" value="off">オフ</label>
-                </div>
-            </div>
+            <div id="button1">いくよっ</div>
             <div id="dl-button">
                 <a id="download" href="#" download="cut_in.png">画像ダウンロード</a>
             </div>
@@ -67,18 +75,19 @@
         </div>
     </section>
     <section id="tw">
+        <div class="twitter">
             <a class="twitter-timeline"  href="https://twitter.com/hashtag/symphogear"
                 data-widget-id="905967462595780608"
-                data-height="540"
-                data-width="250">#symphogear のツイート
+                data-height="600"
+                data-width="230">#symphogear のツイート
             </a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
     </section>
     <footer>
         <div style="display:none;">
             <input type="file" accept="image/*" id="getfile">
         </div>
-        test
     </footer>
 </div>
 

@@ -1,7 +1,5 @@
 
-a {
-    text-decoration: none;
-}
+
 
 html{
     height:100%;
@@ -12,17 +10,11 @@ body{
     height:100%;
 }
 
-.shadow{
-    box-shadow: 1px 1px 1px 1px #F2F2F2;
-    -webkit-box-shadow: 1px 1px 1px 1px #F2F2F2;
-    -moz-box-shadow: 1px 1px 1px 1px #F2F2F2;
-}
-
 #container {
     height: auto !important;
     margin:auto;
     margin-top:0px;
-    max-width:990px;
+    max-width:1050px;
     font-size:13px;
     background-color:#ffffff;
 }
@@ -32,19 +24,19 @@ p {
 }
 
 header {
-    margin-bottom: 20px;
-    border-bottom:solid 2px #F8E0F7;
+    margin-bottom: 10px;
     line-height: 0.5em;
     height:60px;
     padding:1px;
+    text-align:center;
 }
 
+
 header h1{
+    color:#FA5882;
     font-size:26px;
     color:#F5A9F2;
 }
-
-
 
 header > p > a:link,#about a:visited{
     color:#F5A9F2;
@@ -61,34 +53,59 @@ header > p > a:link,#about a:visited{
 
 #tw {
     float:left;
+    paddig-left:25px;
+    background-color:#CEECF5;
+    width:260px;
 }
 
-
+.twitter{
+    margin:15px;
+}
 
 #settings{
     margin:auto;
     overflow:auto;
-    height:115px;
+    height:114px;
 }
 
 
 .select{
     height:100%;
     float:left;
-    width:310px;
     padding-left:10px;
     background-color:#F5A9BC;
+    border-radius: 5px 5px 5px 5px;
+    margin-right:5px;
+}
+
+#c-type{
+    width:300px;
+}
+
+#c-name{
+    width:240px;
+}
+
+#c-sound{
+    height:100%;
+    float:left;
+    width:70px;
 }
 
 #settings p {
-    color:#610B21;
+    color:#ffffff;
     font-weight: bold;
-    
+    font-size:16px;
+    line-height: 0em;
 }
 
 .cb {
     float:left;
     margin:0px 5px;
+}
+
+.inputname{
+    font-size:24px;
 }
 
 #screen1 {
@@ -113,7 +130,6 @@ header > p > a:link,#about a:visited{
     background-color: #ffffff;
     height:120px;
     width:200px;
-    
 }
 
 #preview {
@@ -122,6 +138,9 @@ header > p > a:link,#about a:visited{
  height:360px;
 }
 
+#preview :hover{
+    cursor:pointer;
+}
 /*
 position:absoluteの要素は強制的にblockになり
 display: table-cell;　vertical-align: middle;が効かない。
@@ -193,13 +212,9 @@ display: table-cell;　vertical-align: middle;が効かない。
     margin:auto;
 }
 
-
-#button-area{
+#button1 {
     float:left;
     margin-right:10px;
-}
-
-#button1 {
     width: 210px;
     height: 60px;
     background-color: #FA5882;
@@ -234,6 +249,7 @@ display: table-cell;　vertical-align: middle;が効かない。
 
 #dl-button a :hover {
     background-color: #A4A4A4;
+    cursor: pointer;
 }
 
 
@@ -241,7 +257,7 @@ display: table-cell;　vertical-align: middle;が効かない。
     width:258px;
     height:58px;
     float:left;
-    border:solid 1px #000;   
+    border:solid 1px #848484;   
 }
 
 
@@ -274,4 +290,45 @@ footer {
 .hibiki{
     color:#FACC2E;
     font-weight: bold;
+}
+
+
+.oto {
+    text-align:center;
+    font-size:16px;
+    color:#FF0000;
+}
+
+.sample input {
+	display: none;
+}
+
+.sample label{
+	display: block;
+	cursor: pointer;
+	width: 40px;
+    height:40px;
+	margin: auto;
+	background: #bdc3c7;
+	color: #869198;
+	font-size: 16px;
+	text-align: center;
+	line-height: 40px;
+	transition: .2s;
+	margin-bottom: 3px;
+}
+
+.sample label:first-of-type{
+	border-radius: 15px 15px 15px 15px;
+}
+.sample label:last-of-type{
+	border-radius: 15px 15px 15px 15px;
+}
+.sample input[type="radio"]:checked + .switch-on {
+	background-color: #2E64FE;
+	color: #fff;
+}
+.sample input[type="radio"]:checked + .switch-off {
+	background-color: #6E6E6E;
+	color: #fff;
 }

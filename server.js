@@ -3,7 +3,7 @@ var http = require('http'),
 var server = http.createServer();
 var msg;
 server.on('request', function(req, res){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.writeHead(200, {'Content-Type': 'html/plain'});
     fs.readFile(__dirname + '/public_html/aa.html', 'utf-8', function(err, data) {
         if (err){
             res.writeHead(404, {'Content-Type': 'text/plain'});           

@@ -32,6 +32,7 @@ header {
 }
 
 
+
 header h1{
     color:#FA5882;
     font-size:26px;
@@ -83,13 +84,13 @@ header > p > a:link,#about a:visited{
 }
 
 #c-name{
-    width:240px;
+    width:210px;
 }
 
 #c-sound{
     height:100%;
     float:left;
-    width:70px;
+    width:100px;
 }
 
 #settings p {
@@ -297,6 +298,8 @@ footer {
     text-align:center;
     font-size:16px;
     color:#FF0000;
+    font-weight: bold;
+    line-height: 2em;
 }
 
 .sample input {
@@ -306,14 +309,14 @@ footer {
 .sample label{
 	display: block;
 	cursor: pointer;
-	width: 40px;
-    height:40px;
+	width: 64px;
+    height:38px;
 	margin: auto;
 	background: #bdc3c7;
 	color: #869198;
 	font-size: 16px;
 	text-align: center;
-	line-height: 40px;
+	line-height: 38px;
 	transition: .2s;
 	margin-bottom: 3px;
 }

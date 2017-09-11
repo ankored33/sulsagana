@@ -34,12 +34,17 @@ header {
 
 
 header h1{
-    color:#FA5882;
+    color:#F5A9BC;
     font-size:26px;
-    color:#F5A9F2;
 }
 
-header > p > a:link,#about a:visited{
+header h1 a{
+    color:#F5A9F2;
+    text-decoration: none;
+}
+
+
+header > p > a:link, a:visited{
     color:#F5A9F2;
     text-decoration: underline;
 }
@@ -275,7 +280,7 @@ footer {
 
 .sakimori{
     font-weight: bold;
-    color:#0168b3;
+    color:#2E64FE;
 }
 
 .maria {
@@ -322,10 +327,10 @@ footer {
 }
 
 .sample label:first-of-type{
-	border-radius: 15px 15px 15px 15px;
+	border-radius: 5px 5px 5px 5px;
 }
 .sample label:last-of-type{
-	border-radius: 15px 15px 15px 15px;
+	border-radius: 5px 5px 5px 5px;
 }
 .sample input[type="radio"]:checked + .switch-on {
 	background-color: #2E64FE;

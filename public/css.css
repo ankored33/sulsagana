@@ -1,4 +1,6 @@
+@media screen and ( max-width:1024px) {
 
+}
 
 
 html{
@@ -34,17 +36,16 @@ header {
 
 
 header h1{
-    color:#F5A9BC;
     font-size:26px;
 }
 
-header h1 a{
-    color:#F5A9F2;
+.tytle{
+    color:#F5A9BC;
     text-decoration: none;
 }
 
 
-header > p > a:link, a:visited{
+.shirabe {
     color:#F5A9F2;
     text-decoration: underline;
 }
@@ -156,8 +157,7 @@ display: table-cell;　vertical-align: middle;が効かない。
 .cutin {
     background-color:#000000;
     color:#ffffff;
-    font-family: "Yu Mincho","YuMincho";
-    font-weight: bold;
+    font-family:'Hiragino Mincho ProN', 'HG正楷書体-PRO', 'Hiragino Mincho Pro', 'MS PMincho';
     position: absolute;
     display: none;
 }
@@ -261,11 +261,12 @@ display: table-cell;　vertical-align: middle;が効かない。
 
 #sns-button {
     width:258px;
-    height:58px;
     float:left;
-    border:solid 1px #848484;   
 }
 
+.sns-icon{
+    float:right;
+}
 
 footer {
     background-color:#d2d2d2;

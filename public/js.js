@@ -12,9 +12,10 @@ $(document).ready(function(){
                 animeB();
                 break;
             case "C":
+                animeC();
                 break;
         }
-        setTimeout(function() {screenshot('#screen1');}, 700);
+        setTimeout(function() {screenshot('#screen1');}, 170);
     });
 
 
@@ -75,6 +76,7 @@ function animeB() {
 }
 
 function animeC() {
+        $('#cutin3').css('top','240px');
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
             $('#cutin4').animate({'top':'0px'}, 100),
@@ -82,8 +84,8 @@ function animeC() {
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin3').css('text-align','right');
-                    $('#cutin3').animate({'top':'250px'}, 100);
-                    $('#cutin3').animate({'top':'240px'}, 30);
+                    $('#cutin3').animate({'top':'-10px'}, 100);
+                    $('#cutin3').animate({'top':'0px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);
                     $('#cutin4').animate({'left':'0px'}, 30);
                     $('#sound2').get(0).play()

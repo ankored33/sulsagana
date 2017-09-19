@@ -1,6 +1,4 @@
-@media screen and ( max-width:1024px) {
 
-}
 
 
 html{
@@ -340,4 +338,37 @@ footer {
 .sample input[type="radio"]:checked + .switch-off {
 	background-color: #6E6E6E;
 	color: #fff;
+}
+
+
+@media screen and ( max-width:1024px) {
+    .tytle{
+        font-size:34px;
+        line-height:50px; 
+    }
+    header {
+        height:100%;
+    }
+    #container{
+        width:700px;
+        font-size:30px;
+    }
+    #settings{
+        height:100%;
+    }
+    #main{
+        margin-left:30px;
+    }
+    #settings p{
+        font-size:30px;
+    }
+    #c-type {
+        width:640px;
+    }
+    #c-name {
+        width:500px;
+    }
+    .tbox{
+        font-size:36px;
+    }
 }

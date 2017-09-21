@@ -254,7 +254,7 @@ display: table-cell;　vertical-align: middle;が効かない。
     font-weight:bold;
 }
 
-#dl-button a :hover {
+#dl-button :hover {
     background-color: #A4A4A4;
     cursor: pointer;
 }

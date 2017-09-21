@@ -1,5 +1,7 @@
 
-
+p {
+    text-indent: 0em;
+}
 
 html{
     height:100%;
@@ -214,6 +216,7 @@ display: table-cell;　vertical-align: middle;が効かない。
     overflow:hidden;
     width:640px;
     margin:auto;
+    margin-top:30px;
 }
 
 #button1 {
@@ -344,14 +347,15 @@ footer {
 @media screen and ( max-width:1024px) {
     .tytle{
         font-size:34px;
-        line-height:50px; 
+        line-height:35px; 
     }
     header {
         height:100%;
+        margin-bottom: 0px;
     }
     #container{
         width:700px;
-        font-size:30px;
+        font-size:26px;
     }
     #settings{
         height:100%;
@@ -363,12 +367,61 @@ footer {
         font-size:30px;
     }
     #c-type {
-        width:640px;
+        width:630px;
+        margin-bottom:10px;
+        padding-bottom:10px;
     }
     #c-name {
-        width:500px;
+        width:400px;
+        margin-bottom:10px;
+        padding-bottom:10px;
     }
+    #c-type p{
+        display: block;
+        float:left;
+    }
+    #screen1{
+        margin:0px;
+    }
+    .cb{
+        margin-top:10px;
+        margin-left:30px;
+    }
+    
     .tbox{
         font-size:36px;
+        width:350px;
+        margin-bottom:5px;
     }
+    .oto {
+        font-size:30px;
+        margin:auto;
+    }
+    .sample {
+        width:210px;
+        margin-left:10px;
+    }
+
+    .sample label{
+        line-height: 100px;
+        font-size:50px;
+        width:100px;
+        height:100px;    
+        float:left;
+    }
+    #button1{
+        width:440px;
+        height:100px;
+        margin:10px 0px;
+        font-size:50px;
+        line-height: 100px;
+    }
+    #dl-button{
+        width:190px;
+        height: 100px;
+        margin:10px 0px 10px 10px;
+        float:left;
+        line-height: 100px;
+    }
+    
 }

@@ -1,9 +1,11 @@
 $(document).ready(function(){
     $('#main').on('click', '#execute > #button1', function(){
         var radioVal = $('input[name="type"]:checked').val();
+        var soundVal = $('input[name="sound"]:checked').val();
         erase_screenshot();
         positionReset();
         $('.cutin').css('display','table');
+        if (soundVal === "on"){ $('#sound1').get(0).play() }
         switch (radioVal){
             case "A":
                 animeA();
@@ -15,9 +17,8 @@ $(document).ready(function(){
                 animeC();
                 break;
         }
-        setTimeout(function() {screenshot('#screen1');}, 170);
+        setTimeout(function() {screenshot('#screen1');}, 750);
     });
-
 
     $('.tbox').on('click', function(e) {
     e.target.setSelectionRange(0, e.target.value.length);
@@ -45,15 +46,13 @@ $(document).ready(function(){
 function animeA() {
         $.when(
             $('#cutin1').animate({'top':'0px'}, 100),
-            $('#cutin2').animate({'top':'0px'}, 100),
-            $('#sound1').get(0).play()
+            $('#cutin2').animate({'top':'0px'}, 100)
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin1').animate({'left':'500px'}, 100);
                     $('#cutin1').animate({'left':'490px'}, 30);
                     $('#cutin2').animate({'left':'-10px'}, 100);
                     $('#cutin2').animate({'left':'0px'}, 30);
-                    $('#sound2').get(0).play()
                 },140);
         });    
 }
@@ -61,8 +60,7 @@ function animeA() {
 function animeB() {
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
-            $('#cutin4').animate({'top':'0px'}, 100),
-            $('#sound1').get(0).play()
+            $('#cutin4').animate({'top':'0px'}, 100)
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin3').css('text-align','right');
@@ -70,7 +68,6 @@ function animeB() {
                     $('#cutin3').animate({'top':'240px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);
                     $('#cutin4').animate({'left':'0px'}, 30);
-                    $('#sound2').get(0).play()
                 },140);
         });
 }
@@ -79,8 +76,7 @@ function animeC() {
         $('#cutin3').css('top','240px');
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
-            $('#cutin4').animate({'top':'0px'}, 100),
-            $('#sound1').get(0).play()
+            $('#cutin4').animate({'top':'0px'}, 100)
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin3').css('text-align','right');
@@ -88,7 +84,6 @@ function animeC() {
                     $('#cutin3').animate({'top':'0px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);
                     $('#cutin4').animate({'left':'0px'}, 30);
-                    $('#sound2').get(0).play()
                 },140);
         });
 }

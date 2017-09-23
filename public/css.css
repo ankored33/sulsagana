@@ -69,6 +69,11 @@ header h1{
     margin:15px;
 }
 
+.twitter-m{
+    display: none;
+}
+
+
 #settings{
     margin:auto;
     overflow:auto;
@@ -219,7 +224,7 @@ display: table-cell;　vertical-align: middle;が効かない。
 #execute {
     overflow:hidden;
     width:640px;
-    margin:auto;
+    margin:10px auto;
 }
 
 #button1 {
@@ -280,30 +285,19 @@ footer {
     text-align:right;
 }
 
-.kirika{
-    font-weight: bold;
-    color:#04B404;
-}
 
 .sakimori{
     font-weight: bold;
     color:#2E64FE;
 }
 
-.maria {
-    font-weight: bold;
-    color:#A4A4A4;   
-}
 
 .chris{
     color:#FE2E64;
     font-weight: bold;
 }
 
-.hibiki{
-    color:#FACC2E;
-    font-weight: bold;
-}
+
 
 
 .oto {
@@ -427,6 +421,18 @@ footer {
         margin:10px 0px 10px 10px;
         float:left;
         line-height: 100px;
+    }
+
+    .twitter{
+        display:none;
+    }
+    #tw {
+        width:700px;
+    }
+    .twitter-m{
+        display:block;
+        margin-top:10px;
+        margin-left:50px;
     }
     
 }

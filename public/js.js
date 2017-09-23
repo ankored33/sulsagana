@@ -64,8 +64,8 @@ function animeB() {
         ).done(function(){
                 setTimeout(function(){
                     $('#cutin3').css('text-align','right');
-                    $('#cutin3').animate({'top':'250px'}, 100);
-                    $('#cutin3').animate({'top':'240px'}, 30);
+                    $('#cutin3').animate({'top':'260px'}, 100);
+                    $('#cutin3').animate({'top':'250px'}, 30);
                     $('#cutin4').animate({'left':'-10px'}, 100);
                     $('#cutin4').animate({'left':'0px'}, 30);
                 },140);
@@ -73,7 +73,7 @@ function animeB() {
 }
 
 function animeC() {
-        $('#cutin3').css('top','240px');
+        $('#cutin3').css('top','250px');
         $.when(
             $('#cutin3').animate({'left':'0px'}, 100),
             $('#cutin4').animate({'top':'0px'}, 100)

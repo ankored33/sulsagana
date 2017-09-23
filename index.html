@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>シュルシャガナ風カットイン ジェネレーター</title>
-    <link rel="stylesheet" href="css.css" type="text/css">
+    <link rel="stylesheet" href="./public/css.css" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
-    <script type="text/javascript" src="js.js"></script>
+    <script type="text/javascript" src="./public/js.js"></script>
     <meta name="viewport" content="initial-scale=1.0,width=700">
 </head>
 <body>
@@ -20,9 +20,9 @@
             <div id="c-type" class="select">
                 <p>タイプを選んで</p>
                     <div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="A" checked="checked">左右</div><div><img src="/image/typeA.png" width="80px"></div></label></div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="B">左下</div><div><img src="/image/typeB.png" width="80px"></div></label></div>
-                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="C">右上</div><div><img src="/image/typeC.png" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="A" checked="checked">左右</div><div><img src="./public/image/typeA.png" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="B">左下</div><div><img src="./public/image/typeB.png" width="80px"></div></label></div>
+                        <div class="cb"><label><div style="margin:auto;"><input type="radio" name="type" value="C">右上</div><div><img src="./public/image/typeC.png" width="80px"></div></label></div>
                     </div>
             </div>
             <div id="c-name" class="select">
@@ -46,7 +46,7 @@
 
         </div>
         <div id="screen1">
-            <img src="/image/default.png" id="preview">
+            <img src="./public/image/default.png" id="preview">
             <div id="cutin1" class="cutin tate">
                 <span class="text"></span>
             </div>
@@ -103,7 +103,7 @@
         </div>
     </section>
     <footer>
-        <a href="/about">moromoro</a>
+        <a href="/about/about.html">about</a>
         <div style="display:none;">
             <input type="file" accept="image/*" id="getfile">
         </div>
@@ -129,10 +129,7 @@ file.onchange = function (){
 </script>
 
 <audio id="sound1" preload="auto">
-    <source src="/sound/hyoushigi2.mp3" type="audio/mp3">
-</audio>
-<audio id="sound2" preload="auto">
-    <source src="/sound/beat00.mp3" type="audio/mp3">
+    <source src="./public/sound/sound.mp3" type="audio/mp3">
 </audio>
 
 </body>
